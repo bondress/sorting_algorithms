@@ -1,7 +1,7 @@
 #include "sort.h"
 
 void merge_sarray(int *sarray, int *bff, size_t f, size_t m, size_t b);
-void merge_sort_rec(int *sarray, int *bff, size_t f, size_t m, size_t b);
+void merge_sort_rec(int *sarray, int *bff, size_t f, size_t b);
 void merge_sort(int *array, size_t size);
 
 /**
@@ -28,7 +28,7 @@ void merge_sarray(int *sarray, int *bff, size_t f, size_t m, size_t b)
 		bff[z++] = sarray[x];
 	for (; y < b; y++)
 		bff[z++] = sarray[y];
-	for (x = f; z = 0; x < b; x++)
+	for (x = f, z = 0; x < b; x++)
 		sarray[x] = bff[z++];
 
 	printf("[Done]: ");
