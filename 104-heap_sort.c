@@ -52,7 +52,7 @@ void heapify(int *array, size_t size, size_t base, size_t root)
  * @array: an array of ints.
  * @size: size of the array.
  */
-void heap_sort(int **array, size_t size)
+void heap_sort(int *array, size_t size)
 {
 	int a;
 
@@ -60,9 +60,12 @@ void heap_sort(int **array, size_t size)
 		return;
 
 	for (a = (size / 2) - 1; a >= 0; a--)
+		heapify(array, size, size, a);
+
+	for (a = size - 1; a > 0; a--)
 	{
-		swp_ints(array, array + 1);
+		swp_ints(array, array + a);
 		print_array(array, size);
-		heapify(array, size, i, 0);
+		heapify(array, size, a, 0);
 	}
 }
