@@ -48,7 +48,7 @@ void counting_sort(int *array, size_t size)
 		c[a] = 0;
 	for (a = 0; a < (int)size; a++)
 		c[array[a]] += 1;
-	for (a = 0; a < (max + 1); a++)
+	for (a = 0; a < (m + 1); a++)
 		c[a] += c[a - 1];
 	print_array(c, m + 1);
 
