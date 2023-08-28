@@ -34,7 +34,7 @@ int hoare_part(int *array, size_t size, int l, int r)
 	int pvt, abv, bel;
 
 	pvt = array[r];
-	for (abv = l - 1; bel = r + 1; abv < bel;)
+	for (abv = l - 1, bel = r + 1; abv < bel;)
 	{
 		do {
 			abv++;
@@ -66,7 +66,7 @@ void hoare_sort(int *array, size_t size, int l, int r)
 
 	if (r - l > 0)
 	{
-		prt = hoare_partition(array, size, l, r);
+		prt = hoare_part(array, size, l, r);
 		hoare_sort(array, size, l, prt - 1);
 		hoare_sort(array, size, prt, r);
 	}
