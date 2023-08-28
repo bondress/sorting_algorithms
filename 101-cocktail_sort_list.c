@@ -59,7 +59,7 @@ void swp_nd_bd(listint_t **l, listint_t **t, listint_t **s)
 }
 
 /**
- * cocktail_sort_list = sort a doubly linked list of ints in
+ * cocktail_sort_list - sort a doubly linked list of ints in
  * ascending order using the cocktail shaker sort algorithm
  * @list: pointer to the head of the doubly linked list.
  */
