@@ -73,7 +73,7 @@ void ins_sort_deck_kind(deck_node_t **deck)
 {
 	deck_node_t *iter, *ins, *t;
 
-	for (iter = (*deck)->next; iter != NULL; iter = tmp)
+	for (iter = (*deck)->next; iter != NULL; iter = t)
 	{
 		t = iter->next;
 		ins = iter->prev;
