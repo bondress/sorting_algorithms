@@ -36,8 +36,8 @@ void bitonic_mer(int *array, size_t size, size_t st, size_t se, char flow)
 		for (a = st; a < st + j; a++)
 		{
 			if ((flow == UP && array[a] > array[a + j]) ||
-				(flow == DOWN && array[a] < array[a + j]))
-					swp_ints(array + a, array + a + j);
+			(flow == DOWN && array[a] < array[a + j]))
+			swp_ints(array + a, array + a + j);
 		}
 		bitonic_mer(array, size, st, j, flow);
 		bitonic_mer(array, size, st + j, j, flow);
