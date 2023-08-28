@@ -17,7 +17,7 @@ int get_mv(int *array, int size)
 
 	for (m = array[0], a = 1; a < size; a++)
 	{
-		if (array[a] > max)
+		if (array[a] > m)
 			m = array[a];
 	}
 
@@ -70,8 +70,8 @@ void radix_sort(int *array, size_t size)
 	if (b == NULL)
 		return;
 
-	m = get_max(array, size);
-	for (s = 1; m / s > 0; sig *= 10)
+	m = get_mv(array, size);
+	for (s = 1; m / s > 0; s *= 10)
 	{
 		radix_count_sort(array, size, s, b);
 		print_array(array, size);
